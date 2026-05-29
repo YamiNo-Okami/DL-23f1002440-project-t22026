@@ -118,21 +118,15 @@ By using it, we can get answers to the following questions:
 ### Steps to find ```mAP@K``` in our case ```mAP@3``` :
 #### 1. Find Precision : 
 **Precision** : Precision can be defined as the fraction of **relevant items** in **all recommended items (relevant + irrelevant items)**.
-    $$
-    \text{Precision} = \frac{\sum \space \text{Relevent Items}}{\sum \space \text{All Items}}
-    $$
+    $$    \text{Precision} = \frac{\sum \space \text{Relevent Items}}{\sum \space \text{All Items}}$$
 
 #### 2. Find Precision at $K$ (```P@K```) :
 The precision metric  itself does not consider the rank or order in which the relevant items appear. Time to include the ranks to our precision formula. Precision<b>@K</b> can be defined as **the fraction of relevant items in the top K recommended items**.
-$$
-\text{P@K} = \frac{ \sum \space \text{Relevent items in top K recommendations }}{ \sum \space \text{Items in top K recommendations }}
-$$
+$$\text{P@K} = \frac{ \sum \space \text{Relevent items in top K recommendations }}{ \sum \space \text{Items in top K recommendations }}$$
 
 #### 3. Find Average Precision@$K$ (```AP@K```)  :
 The Average Precision@$K$ or ```AP@K``` is the sum of precision@$K$ where the item at the k<sub>th</sub> rank is **relevant** (```rel(k)```) divided by the **total number of relevant items** (r) in the top K recommendations
-$$
-\text{AP@K} = \frac{1}{r} \sum_{k=1}^{K}{\text{Precision@}k \cdot  rel(k)}
-$$
+$$\text{AP@K} = \frac{1}{r} \sum_{k=1}^{K}{\text{Precision@}k \cdot  rel(k)}$$
 
 $$
 rel(k)=
@@ -144,6 +138,4 @@ $$
 
 #### 4. Find Mean Average Precision@K (```MAP@K```) : 
 It averages the AP@K for recommendations for N multiple-choice questions.
-$$
-\text{MAP@K} = \frac{1}{N} \sum_{j=1}^{N} \frac{1}{r}\sum_{k=1}^{K}\text{Precision@}k\cdot rel(k)
-$$
+$$\text{MAP@K} = \frac{1}{N} \sum_{j=1}^{N} \frac{1}{r}\sum_{k=1}^{K}\text{Precision@}k\cdot rel(k)$$
